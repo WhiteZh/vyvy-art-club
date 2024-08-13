@@ -7,6 +7,9 @@ from os.path import join
 class handler(BaseHTTPRequestHandler):
 
     def do_POST(self):
+        self.send_response(200)
+        self.end_headers()
+        return
 
         content_length = int(self.headers['Content-Length'])
         post_data = self.rfile.read(content_length).decode('utf-8')
