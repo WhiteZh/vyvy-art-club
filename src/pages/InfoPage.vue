@@ -22,7 +22,8 @@ async function submit() {
   if (res.ok) {
     pagemode.value = 'completion';
   } else {
-    console.log(res.statusText);
+    window.alert(`${res.status}: ${res.statusText}`);
+    console.log(res);
   }
 }
 </script>
