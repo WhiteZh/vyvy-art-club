@@ -5,8 +5,8 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   server: {
     proxy: {
-      '/api/submit': {
-        target: 'localhost:5328/api/submit',
+      '/api': {
+        target: 'http://127.0.0.1:5000',
         changeOrigin: true,
       }
     }

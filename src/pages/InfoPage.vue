@@ -9,13 +9,13 @@ async function submit() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name: document.getElementById('name'),
-      grade: document.getElementById('grade'),
-      school: document.getElementById('school'),
-      email: document.getElementById('email'),
-      ig_handle: document.getElementById('ig-handle'),
-      referee: document.getElementById('referee'),
-      description: document.getElementById('description'),
+      name: document.getElementById('name').value,
+      grade: document.getElementById('grade').value,
+      school: document.getElementById('school').value,
+      email: document.getElementById('email').value,
+      ig_handle: document.getElementById('ig-handle').value,
+      referee: document.getElementById('referee').value,
+      description: document.getElementById('description').value,
     }),
   });
 
