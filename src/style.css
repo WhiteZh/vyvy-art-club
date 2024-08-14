@@ -6,4 +6,5 @@
 
 :root {
     background-color: #920102;
+    @apply font-['Times_New_Roman'] text-white;
 }
