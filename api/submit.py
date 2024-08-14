@@ -49,3 +49,7 @@ def submit():
         print(e)
 
     return "Internal Server Error", 500
+
+
+if environ['LDEV']:
+    app.run(debug=True)
