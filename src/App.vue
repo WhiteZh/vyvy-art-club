@@ -16,8 +16,8 @@ let CurrentPage = computed(() => pages[pagemode.value]);
 <template>
   <div class="min-h-screen flex flex-col justify-start relative text-center max-w-[800px] mx-auto">
     <div class="mt-5">
-      <h1 class="font-['Orbitron'] text-4xl text-white font-bold">A.A.</h1>
-      <h4 class="text-white text-xl">Action Archive</h4>
+      <h4 class="font-['Orbitron'] text-4xl text-white font-bold">A.A.</h4>
+      <h1 class="text-white text-xl">Action Archive</h1>
     </div>
     <component :is="CurrentPage"/>
   </div>
