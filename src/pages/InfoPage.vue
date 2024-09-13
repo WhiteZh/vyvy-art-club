@@ -2,6 +2,8 @@
 
 import {pagemode} from "../glob.js";
 
+const utilf = (x) => typeof x !== "string" ? '-' : x === '' ? '-' : x;
+
 async function submit() {
   let res = await fetch("/api/submit", {
     method: 'POST',
@@ -14,8 +16,8 @@ async function submit() {
       school: document.getElementById('school').value,
       email: document.getElementById('email').value,
       ig_handle: document.getElementById('ig-handle').value,
-      referee: document.getElementById('referee').value,
-      description: document.getElementById('description').value,
+      referee: utilf(document.getElementById('referee').value),
+      description: utilf(document.getElementById('description').value),
     }),
   });
 
@@ -51,10 +53,10 @@ async function submit() {
     <input type="text" id="ig-handle" name="ig-handle" placeholder="@john_doe"/>
 
     <label for="referee" class="text-2xl">Who referred you?</label>
-    <input type="text" id="referee" name="referee"/>
+    <input type="text" id="referee" name="referee" placeholder="Referrals get 4 Action points!"/>
 
     <label for="description" class="text-md mt-2">Write a short description on what you are passionate about</label>
-    <textarea id="description" name="description" class="rounded-md flex-grow max-h-56 text-black text-lg px-1.5" placeholder="...."/>
+    <textarea id="description" name="description" class="rounded-md flex-grow max-h-56 text-black text-lg px-1.5" placeholder="(Optional)"/>
 
     <button type="submit" class="text-2xl rounded-xl bg-[#ffb800] h-12 font-['Orbitron'] w-32 font-bold mt-5 mx-auto" @click.prevent="submit">Submit</button>
   </form>
