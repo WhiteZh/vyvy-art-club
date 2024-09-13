@@ -42,7 +42,7 @@ async function submit() {
     </select>
 
     <label for="school" class="text-2xl">School</label>
-    <input type="text" id="school" name="school" placeholder="Example High School"/>
+    <input type="text" id="school" name="school" placeholder="Example High School" value="Fountain Valley High School"/>
 
     <label for="email" class="text-2xl">Email</label>
     <input type="email" id="email" name="email" placeholder="someone@example.com"/>
