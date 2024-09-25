@@ -7,10 +7,10 @@ app = Flask('vyvy-art-club')
 
 
 conn_params = {
-    'dbname': environ['DBNAME'],
-    'user': environ['DBUSER'],
-    'password': environ['DBPW'],
-    'host': environ['DBHOST'],
+    'dbname': environ['POSTGRES_DATABASE'],
+    'user': environ['POSTGRES_USER'],
+    'password': environ['POSTGRES_PASSWORD'],
+    'host': environ['POSTGRES_HOST'],
 }
 
 
