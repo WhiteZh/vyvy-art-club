@@ -51,5 +51,5 @@ def submit():
     return "Internal Server Error", 500
 
 
-if 'LDEV' in environ:
+if __name__ == '__main__':
     app.run(debug=True)
