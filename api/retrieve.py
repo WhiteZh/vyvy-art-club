@@ -18,6 +18,8 @@ conn_params = {
 
 @app.route('/api/retrieve', methods=['GET'])
 def submit():
+    return "Endpoint deprecated", 503
+
     try:
         print({
             "method": request.method,  # HTTP method (e.g., GET, POST)
